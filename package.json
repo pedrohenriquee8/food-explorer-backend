@@ -2,9 +2,9 @@
   "name": "food-explorer-backend",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "index.js",
   "scripts": {
+    "dev": "ts-node-dev ./src/app/api/api.ts",
     "test": "jest --verbose --passWithNoTests"
   },
   "keywords": [],
