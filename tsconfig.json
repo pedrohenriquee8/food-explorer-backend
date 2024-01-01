@@ -9,6 +9,8 @@
     "paths": {
       "@api/*": ["app/api/*"],
       "@models/*": ["core/domain/models/*"],
+      "@providers/*": ["core/providers/*"],
+      "@messages/*": ["core/messages/*"],
       "@typing/*": ["core/domain/types/*"],
       "@errors/*": ["core/errors/*"],
       "@interfaces/*": ["core/interfaces/*"],
