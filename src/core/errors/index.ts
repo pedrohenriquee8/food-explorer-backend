@@ -1,18 +1,19 @@
-export abstract class FoodExplorerError extends Error {
-  statusCode: number;
-  name: string;
+import {
+  AccountAlreadyExistsServiceError,
+  AccountNotFoundServiceError,
+  ExpirationTimeRefreshTokenServiceError,
+  InvalidCredentialsServiceError,
+  InvalidRefreshTokenServiceError,
+} from "./auth/index";
+import { UnexpectedInternalServiceError } from "./UnexpectedInternalServiceError";
+import { FoodExplorerError } from "./error";
 
-  constructor(name: string, statusCode: number, message: string) {
-    super(message);
-    this.statusCode = statusCode;
-    this.name = name;
-  }
-
-  toJSON() {
-    return {
-      statusCode: this.statusCode,
-      name: this.name,
-      message: this.message,
-    };
-  }
-}
+export {
+  AccountAlreadyExistsServiceError,
+  AccountNotFoundServiceError,
+  ExpirationTimeRefreshTokenServiceError,
+  InvalidCredentialsServiceError,
+  InvalidRefreshTokenServiceError,
+  UnexpectedInternalServiceError,
+  FoodExplorerError,
+};
