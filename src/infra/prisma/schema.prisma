@@ -10,8 +10,24 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model User {
-    id    Int     @id @default(autoincrement())
-    email String  @unique
-    name  String?
+enum AccountRoleType {
+    USER
+    ADMIN
+}
+
+model Account {
+    id           String          @id @default(uuid())
+    name         String
+    email        String          @unique
+    password     String
+    role         AccountRoleType @default(USER)
+    RefreshToken RefreshToken[]
+}
+
+model RefreshToken {
+    id        String @id @default(uuid())
+    expiresIn Int
+    accountId String
+
+    account Account @relation(fields: [accountId], references: [id])
 }
