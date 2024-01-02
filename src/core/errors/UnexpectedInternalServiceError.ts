@@ -1,5 +1,5 @@
 import { CommomMessages } from "@messages/CommomMessages";
-import { FoodExplorerError } from ".";
+import { FoodExplorerError } from "./error";
 
 const { UnexpectedInternalErrorMessage } = CommomMessages;
 
